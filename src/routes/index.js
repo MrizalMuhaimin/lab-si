@@ -6,6 +6,7 @@ import {
 
   import Login from '../pages/Login';
   import Home from '../pages/Home'
+  import HomePageLayout from '../layouts/Homepage/Homepage.layout';
 
 
   function CustomRouter () {
@@ -13,7 +14,7 @@ import {
         <Router>
             <Routes>
                 <Route exact path="/login" element={<Login/>}/>
-                <Route exact path="/" element={<Home/>}/>
+                <Route exact path="/" element={<HomePageLayout><Home /></HomePageLayout> }/>
             </Routes>
         </Router>
     )
