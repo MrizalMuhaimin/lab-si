@@ -1,11 +1,21 @@
+import ItemMenu from './ItemMenu';
+import {Menu} from './data.menu.js';
+
 function SideBar ({ children }) {
     return (
-        <div className='flex w-full  '>
-            <div id='SideMenu-Content' className='relative flex flex-col' style={{ padding: '1.5rem 1rem 1.5rem 1rem' }}>
-                <p>coba</p>
-                <p>coba</p>
+        <div className='flex z-10 w-full   '>
+            <div id='SideMenu-Content' className='fixed left-0 top-0 flex flex-col w-24 min-h-screen shadow-md mt-20 items-center'>
+                <div className='w-full h-16 items-center flex justify-center'>
+                    <svg xmlns='http://www.w3.org/2000/svg' style={{width:40, height:40}} className="stroke-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                {Menu.map((data,index) =>
+                    <ItemMenu key={index} icon={data.icon} title={data.title} link={data.link} />
+                )}
+                
             </div>
-            <div className='w-full' id='Content' style={{ transition: 'width 1s ease-in-out' }}>
+            <div className='w-full min-h-screen pl-24' id='Content' style={{ transition: 'width 1s ease-in-out' }}>
                 {children}
             </div>
         </div>

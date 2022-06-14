@@ -8,9 +8,7 @@ const HomePageLayout = ({ children, withoutHeader = false }) => {
     <React.Fragment>
     { !withoutHeader && <Header /> }
       <SideMenu>
-      
         <div className='p-0 bg-white'>
-          
           <main>{children}</main>
         </div>
         <Footer />

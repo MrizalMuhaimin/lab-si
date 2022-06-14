@@ -10,7 +10,7 @@ export const Menu = [
         link:'/regristasi'
     },
     {
-        icon:'/images/icons/kunjungan.svg',
+        icon:'/images/icons/visit.svg',
         title:'Kunjungan',
         link:'/kunjungan'
     }
