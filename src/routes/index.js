@@ -17,7 +17,7 @@ import {
             <Routes>
                 <Route exact path="/login" element={<Login/>}/>
                 <Route exact path="/" element={<HomePageLayout><Home /></HomePageLayout> }/>
-                <Route exact path="/regristrasi" element={<HomePageLayout><Registrasi /></HomePageLayout> }/>
+                <Route exact path="/registrasi" element={<HomePageLayout><Registrasi /></HomePageLayout> }/>
                 <Route exact path="/kunjungan" element={<HomePageLayout><Kunjungan /></HomePageLayout> }/>
             </Routes>
         </Router>

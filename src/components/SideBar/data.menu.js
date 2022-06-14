@@ -6,8 +6,8 @@ export const Menu = [
     },
     {
         icon:'/images/icons/regristasi.svg',
-        title:'Regristrasi',
-        link:'/regristrasi'
+        title:'Registrasi',
+        link:'/registrasi'
     },
     {
         icon:'/images/icons/visit.svg',
