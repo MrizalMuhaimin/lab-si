@@ -15,7 +15,7 @@ function SideBar ({ children }) {
                 )}
                 
             </div>
-            <div className='w-full min-h-screen pl-24' id='Content' style={{ transition: 'width 1s ease-in-out' }}>
+            <div className='w-full pl-24' id='Content' style={{ transition: 'width 1s ease-in-out' }}>
                 {children}
             </div>
         </div>
