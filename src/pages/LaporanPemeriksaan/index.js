@@ -1,105 +1,25 @@
 import { useEffect, useState } from "react";
-function Kunjungan (){
+function LaporanPemeriksaan (){
     const Data = [
         {
             "id":1,
-            "Tanggal":"21-02-2021",
-            "Registrasi":"reg3240942",
-            "Nama":"Hartono",
-            "Alamat":"Bandung",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Alam"
-
+            "nama":"Pemeriksaan Rongsen",
         },
         {
             "id":2,
-            "Tanggal":"22-02-2021",
-            "Registrasi":"reg032342",
-            "Nama":"Budi",
-            "Alamat":"Kebumen",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Bambang"
-
+            "nama":"Pemeriksaan Darah",
         },
         {
             "id":3,
-            "Tanggal":"23-02-2021",
-            "Registrasi":"reg321232",
-            "Nama":"Parijo",
-            "Alamat":"Lembang",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Akram"
-
+            "nama":"Pemeriksaan Rongsen",
         },
         {
             "id":4,
-            "Tanggal":"25-02-2021",
-            "Registrasi":"regr39342",
-            "Nama":"Anoman",
-            "Alamat":"Jogja",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Brani"
-
+            "nama":"Pemeriksaan Darah",
         },
         {
             "id":5,
-            "Tanggal":"25-02-2021",
-            "Registrasi":"regwe89r42",
-            "Nama":"Siti",
-            "Alamat":"Ambal",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Kholifah"
-
-        },
-        {
-            "id":6,
-            "Tanggal":"25-02-2021",
-            "Registrasi":"reg032342",
-            "Nama":"Sule",
-            "Alamat":"Kebumen",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Wahyu"
-
-        },
-        {
-            "id":7,
-            "Tanggal":"27-02-2021",
-            "Registrasi":"reg032342",
-            "Nama":"Bambang",
-            "Alamat":"Kebumen",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Alam"
-
-        },
-        {
-            "id":8,
-            "Tanggal":"28-02-2021",
-            "Registrasi":"reg032342",
-            "Nama":"Felicia",
-            "Alamat":"Kebumen",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Hilal"
-
-        },
-        {
-            "id":9,
-            "Tanggal":"28-02-2021",
-            "Registrasi":"reg032342",
-            "Nama":"Vaza",
-            "Alamat":"Kebumen",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Hilal"
-
-        },
-        {
-            "id":10,
-            "Tanggal":"29-02-2021",
-            "Registrasi":"reg032342",
-            "Nama":"Akram",
-            "Alamat":"Kebumen",
-            "Jasa":"BPJS",
-            "Dokter":"Dr. Alam"
-
+            "nama":"Pemeriksaan Rongsen",
         },
     ]
 
@@ -122,24 +42,10 @@ function Kunjungan (){
     function handleNext(){
     }
 
-    var filterList = []
-    function filterSumList(){
-        filterList = []
-        for(var i=firstIdx-1;i<lastIdx;i++) {
-            filterList.push(Data[i])
-        }
-        setListData(filterList)
-    }
-
-    useEffect(() => {
-        filterSumList()
-    })
-
     return (
         <div className=" p-8">
-            {filterSumList}
             <div className='tex-center items-center mt-4 mb-10'>
-                <h1 className='font-bold text-2xl text-info text-center '>Daftar Kunjungan Pasien</h1>
+                <h1 className='font-bold text-2xl text-info text-center '>Laporan 10 Besar Pemeriksaan</h1>
             </div>
 
             <div>
@@ -153,6 +59,13 @@ function Kunjungan (){
                         <option>Minggu ini</option>
                         <option>Bulan ini</option>
                     </select>
+                    <label class="label">
+                        <span class="label-text">Tanggal</span>
+                    </label>
+                    <div className="flex">
+                        <input type="text" placeholder="Filter Tanggal" class="input input-bordered" onChange={(e) => setInputText(e.target.value)}/>
+                        <button className="btn btn-info ml-4 text-white">Filter</button>
+                    </div>
                 </div>
             </div>
 
@@ -184,24 +97,14 @@ function Kunjungan (){
                     <thead>
                         <tr>
                             <th className="text-center">No</th>
-                            <th className="text-center">Tanggal</th>
-                            <th className="text-center">No. Registrasi</th>
-                            <th className="text-center">Nama</th>
-                            <th className="text-center">Alamat</th>
-                            <th className="text-center">Jasa Jaminan Kesehatan</th>
-                            <th className="text-center">Dokter Pengirim</th>
+                            <th className="text-center">Nama Pemeriksaan</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {listData.map((item) => (
+                    {Data.map((item) => (
                         <tr>
                             <td className="text-center">{item.id}</td>
-                            <td className="text-center">{item.Tanggal}</td>
-                            <td className="text-center">{item.Registrasi}</td>
-                            <td className="text-center">{item.Nama}</td>
-                            <td className="text-center">{item.Alamat}</td>
-                            <td className="text-center">{item.Jasa}</td>
-                            <td className="text-center">{item.Dokter}</td>
+                            <td className="text-center">{item.nama}</td>
                         </tr>
                     ))}
                     </tbody>
@@ -221,4 +124,4 @@ function Kunjungan (){
     )
 }
 
-export default Kunjungan;
+export default LaporanPemeriksaan;

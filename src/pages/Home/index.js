@@ -116,7 +116,7 @@ function Home (){
 
     return (
         <div className="p-8  ">
-            <div className='w-8/12 tex-center items-center mt-10 mb-10'>
+            <div className='tex-center items-center mt-4 mb-10'>
                 <h1 className='font-bold text-2xl text-info text-center '>Statistik Pasien dan Pemeriksaan</h1>
             </div>
             <div className='flex'>
@@ -125,14 +125,20 @@ function Home (){
                 </div>
                 <div  className='w-4/12 p-8 '>
                     <div className='rounded-md border-2 border-info'>
-                        <div className='bg-info text-center h-10 items-center align-middle  flex justify-center'>
-                            <h2 className='font-bold text-xl text-white '>INFORMASI</h2>
+                        <div className='bg-info text-center h-10 items-center align-left  flex justify-center'>
+                            <h2 className='font-bold text-xl text-white '>INFORMASI ADMIN</h2>
                         </div>
-                        <div className='text-center h-10 items-center align-middle  flex justify-center border-b-2 border-info'>
-                            <h2 className='font-bold text-md '>{`Pasien Hari Ini : ${countPasien}`}</h2>
+                        <div className='text-center h-10 items-center align-left  flex  border-b-2 border-info'>
+                            <h2 className='font-bold text-md ml-4'>{`Nama : Admin`}</h2>
                         </div>
-                        <div className='text-center h-10 items-center align-middle  flex justify-center'>
-                            <h2 className='font-bold text-md '>{`Pemeriksaan Hari Ini : ${countPemeriksaan}`}</h2>
+                        <div className='text-center h-10 items-center align-middle  flex border-b-2 border-info'>
+                            <h2 className='font-bold text-md ml-4'>{`Level : Administrator`}</h2>
+                        </div>
+                        <div className='text-center h-10 items-center align-middle  flex border-b-2 border-info'>
+                            <h2 className='font-bold text-md ml-4'>{`Pasien Hari Ini : ${countPasien}`}</h2>
+                        </div>
+                        <div className='text-center h-10 items-center align-middle  flex'>
+                            <h2 className='font-bold text-md ml-4'>{`Pemeriksaan Hari Ini : ${countPemeriksaan}`}</h2>
                         </div>
                     </div>
                     
